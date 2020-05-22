@@ -1,0 +1,24 @@
+{% extends 'Profile/base.html' %}
+{% block title %}
+    Company Details
+{% endblock %}
+{% block content %}
+    <div class="row">
+        <div class="col-md-10">
+            <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                    <div class="row">
+                        <div class="row-col-12 col-lg-6">
+                            <img class ='blog-author-picture' src="{{ object.logo.url }}">
+<!--                            <strong><a id="author-name" href="{{ company.name }}"></a></strong>-->
+                        </div>
+                    </div>
+                        <h3 class="mb-0">{{ object.name}}</h3>
+                        <h6>{{ object.current_viewers }} active views</h6>
+                        <h6>{{ object.total_viewers }} total views</h6>
+                        <p class="card-text mb-auto">{{ object.address }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
